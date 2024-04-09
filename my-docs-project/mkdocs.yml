@@ -1,0 +1,126 @@
+site_name: Manish Upadhyay Site
+nav:
+  - Home: index.md
+  - Tutorial:
+    - Jenkins:
+      - Install Jenkins: install-jenkins.md
+      - Install Nginx Reverse Proxy for Jenkins: install-nginx.md
+      - Configure Jenkins with TLS: jenkins-ssl.md 
+      - Adding an SSH Based Agent with Docker to Jenkins: jenkins-ssh-agent.md
+      - Install Jenkins on Kubernetes: jenkins-in-kubernetes.md
+  - Contact: contact.md
+theme:
+  name: material
+  font:
+    text: Roboto
+    code: Roboto Mono
+  
+   # Plugins
+  plugins:
+    - search:
+        separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+    - minify:
+        minify_html: true
+    - mkdocs-video    
+    - git-revision-date-localized:
+        enable_creation_date: true      
+
+  
+  palette:
+
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  
+  features:
+    - content.tooltips
+    - navigation.tabs
+    - navigation.top
+   
+    - navigation.indexes
+    - navigation.tracking
+    - navigation.path  
+    # - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.tabs.link
+    - content.code.annotate
+    - content.code.copy
+
+  language: en
+extra:
+  version:
+    provider: mike
+    default: latest
+  annotate:
+    json: [.s2]
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com
+  generator: false
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation bette
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  # - toc:
+  #     permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde 
+copyright: |
+  Copyright &copy; 2024 Manish Upadhyay</a> 
